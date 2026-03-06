@@ -6,7 +6,10 @@ import { usePlatformStore } from '../store/platformStore';
 import { perturbState, generateNewAlert } from '../data/mockData';
 
 export function useWebSocket() {
-    const { constituencies, updateConstituency, addAlert, setWsStatus, wsStatus } = usePlatformStore();
+    const wsStatus = usePlatformStore((s) => s.wsStatus);
+    const setWsStatus = usePlatformStore((s) => s.setWsStatus);
+    const updateConstituency = usePlatformStore((s) => s.updateConstituency);
+    const addAlert = usePlatformStore((s) => s.addAlert);
     const intervalRef = useRef<number | null>(null);
     const alertIntervalRef = useRef<number | null>(null);
 
@@ -19,9 +22,10 @@ export function useWebSocket() {
 
             // Simulate state updates every 3 seconds
             intervalRef.current = window.setInterval(() => {
+                const constituencies = usePlatformStore.getState().constituencies;
                 const keys = Object.keys(constituencies);
                 const key = keys[Math.floor(Math.random() * keys.length)];
-                const current = usePlatformStore.getState().constituencies[key];
+                const current = constituencies[key];
                 if (current) {
                     updateConstituency(key, perturbState(current));
                 }
@@ -32,13 +36,13 @@ export function useWebSocket() {
                 addAlert(generateNewAlert());
             }, 8000 + Math.random() * 7000);
         }, 1500);
-    }, []);
+    }, [setWsStatus, updateConstituency, addAlert]);
 
     const disconnect = useCallback(() => {
         if (intervalRef.current) clearInterval(intervalRef.current);
         if (alertIntervalRef.current) clearInterval(alertIntervalRef.current);
         setWsStatus('disconnected');
-    }, []);
+    }, [setWsStatus]);
 
     useEffect(() => {
         connect();

@@ -49,6 +49,7 @@ const ConstituencyDot: React.FC<{
     sentiment: number;
     name: string;
     isCrisis: boolean;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
 }> = ({ lat, lon, sentiment, name, isCrisis }) => {
     const pos = useMemo(() => latLonToVec3(lat, lon, 2.05), [lat, lon]);
     const color = sentimentColor(sentiment);

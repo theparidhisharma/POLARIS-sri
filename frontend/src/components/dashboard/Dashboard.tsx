@@ -86,7 +86,7 @@ const SimulationView: React.FC = () => {
     const setStrategyModalOpen = usePlatformStore((s) => s.setStrategyModalOpen);
     React.useEffect(() => {
         setStrategyModalOpen(true);
-    }, []);
+    }, [setStrategyModalOpen]);
 
     return (
         <div style={{ height: '100%', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>

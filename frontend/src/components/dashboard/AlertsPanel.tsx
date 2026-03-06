@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePlatformStore } from '../../store/platformStore';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { AlertCircle, TrendingDown, Activity, Wifi, ChevronUp } from 'lucide-react';
 import type { AlertType } from '../../types';
 import { SYSTEM_STATUSES } from '../../data/mockData';

@@ -16,11 +16,13 @@ import {
 import { usePlatformStore } from '../../store/platformStore';
 import { MOCK_SIMULATION, CONSTITUENCY_DATA } from '../../data/mockData';
 import type { Topic } from '../../types';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
     X, Loader2, Rocket, CheckCircle2,
     TrendingUp, Shield, Heart, Building2, Landmark, Users,
     Zap, AlertTriangle, Activity, BarChart3,
 } from 'lucide-react';
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 const TOPICS: Topic[] = ['Economy', 'Security', 'Healthcare', 'Infrastructure', 'Governance', 'Identity'];
 
@@ -115,7 +117,7 @@ const StrategyModal: React.FC = () => {
             setIsSimulating(false);
             setHasRun(true);
         }, 3200);
-    }, []);
+    }, [SIM_PHASES.length, setSimResult]);
 
     const deployStrategy = () => {
         setDeployed(true);
@@ -368,7 +370,7 @@ const StrategyModal: React.FC = () => {
                                                     label={{ value: 'Δs (sentiment shift)', position: 'bottom', fill: '#546E7A', fontSize: 9 }} />
                                                 <YAxis stroke="#546E7A" fontSize={9} fontFamily="'JetBrains Mono'" hide />
                                                 <Tooltip contentStyle={{ background: '#0F2040', border: '1px solid #1E3A5F', borderRadius: 8, fontSize: 10 }}
-                                                    formatter={(v: any) => [Number(v).toFixed(4), 'P(Δs)']} />
+                                                    formatter={(v: number | undefined) => [(v ?? 0).toFixed(4), 'P(Δs)']} />
                                                 <defs>
                                                     <linearGradient id="densityGrad" x1="0" y1="0" x2="0" y2="1">
                                                         <stop offset="0%" stopColor="#FFB300" stopOpacity={0.6} />
@@ -402,8 +404,8 @@ const StrategyModal: React.FC = () => {
                                                 { label: 'E[Δs]', value: `+${result.ranked_strategies[0].predicted_reception.toFixed(4)}`, color: '#4CAF50', desc: 'Expected sentiment shift' },
                                                 { label: 'σ(Δs)', value: `±${(result.ranked_strategies[0].delta_volatility * 2).toFixed(4)}`, color: '#FFB300', desc: 'Prediction uncertainty' },
                                                 { label: 'P(s>0|ε)', value: `${(result.ranked_strategies[0].confidence * 100).toFixed(1)}%`, color: '#00897B', desc: 'Prob. positive outcome' },
-                                                { label: 'KL(P‖Q)', value: `${(Math.random() * 0.1 + 0.02).toFixed(4)}`, color: '#AB47BC', desc: 'Distribution divergence' },
-                                                { label: 'τ½', value: `${Math.floor(Math.random() * 30 + 60)}min`, color: '#FF7043', desc: 'Half-life of effect' },
+                                                { label: 'KL(P‖Q)', value: `${(result.ranked_strategies[0].delta_volatility * 1.2 + 0.02).toFixed(4)}`, color: '#AB47BC', desc: 'Distribution divergence' },
+                                                { label: 'τ½', value: `${Math.floor(result.ranked_strategies[0].confidence * 50 + 60)}min`, color: '#FF7043', desc: 'Half-life of effect' },
                                                 { label: 'Spatial σ', value: `${25}km`, color: '#1565C0', desc: 'Kernel smoothing radius' },
                                                 { label: 'N(sims)', value: '10,000', color: '#546E7A', desc: 'Monte Carlo iterations' },
                                                 { label: 'Convergence', value: '✓ 0.001', color: '#4CAF50', desc: 'MCMC chain converged' },

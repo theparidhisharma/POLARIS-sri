@@ -1,0 +1,31 @@
+======================================================================
+  POLITICAL AI SENTIMENT PLATFORM — SYNTHETIC DEMONSTRATION
+======================================================================
+
+[1/10] Generating synthetic data...
+    ✓  1310 posts  |  5 constituencies  |  6 platforms  |  24 time steps
+
+[2/10] Building embeddings and topic anchors...
+    ✓  Vocabulary: 36 seed terms  |  6 topic anchors built
+
+[3/10] Running sentiment ensemble...
+    ✓  Scored 1310 posts  |  mean=-0.015  |  std=0.306
+
+[4/10] Extracting features per window...
+    ✓  Features extracted: 5 × 24 windows  |  dim per window = 12
+
+[5/10] Building state vectors X(t) ∈ ℝ²¹...
+    ✓  State tensors: 5 constituencies × 24 steps × 21 dims
+
+[6/10] Initialising Attention-GRU model...
+    Running state transitions...
+Traceback (most recent call last):
+  File "C:\Users\srisa\Desktop\india innovates\political_ai_platform.py", line 383, in <module>
+    x_next, sig2 = model.forward(hist[:t])
+                   ~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\srisa\Desktop\india innovates\political_ai_platform.py", line 347, in forward
+    h = self._gru(x, h)
+  File "C:\Users\srisa\Desktop\india innovates\political_ai_platform.py", line 324, in _gru
+    z  = self._sig(self.Wz@xh + self.bz)
+                   ~~~~~~~^~~
+ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 50 is different from 53)

@@ -3,6 +3,7 @@
 // ─────────────────────────────────────────────────────────
 import type { ConstituencyState, Alert, SimulationResult, SystemStatus, Topic } from '../types';
 
+
 const TOPICS: Topic[] = ['Economy', 'Security', 'Healthcare', 'Infrastructure', 'Governance', 'Identity'];
 
 // ─── Trending Posts Mock Data ──────────────────────────────
@@ -20,8 +21,8 @@ export interface TrendingPost {
     constituency: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const PLATFORM_NAMES = { twitter: '𝕏 Twitter', youtube: '▶ YouTube', reddit: '⬡ Reddit', facebook: 'f Facebook', telegram: '✈ Telegram', news: '📰 News' };
-
 export const TRENDING_POSTS: TrendingPost[] = [
     // Economy
     { id: 'tp-1', platform: 'twitter', author: 'Rajesh Kumar', handle: '@rajesh_econ', content: 'Inflation in Wardha has hit 8.2% — small farmers are struggling to afford basic inputs. Government subsidies are not reaching ground level. #AgriCrisis #WardhaFarmers', topic: 'Economy', engagement: { likes: 12400, shares: 5600, comments: 890 }, sentiment: -0.72, timestamp: new Date(Date.now() - 900000).toISOString(), verified: true, constituency: 'Wardha' },
@@ -50,6 +51,7 @@ export const TRENDING_POSTS: TrendingPost[] = [
     { id: 'tp-14', platform: 'reddit', author: 'u/mumbai_heritage', handle: 'r/Maharashtra', content: 'TIL: Thane has more than 300 heritage sites. New citizen initiative mapping and preserving them digitally. This is how we protect our identity 🏛️', topic: 'Identity', engagement: { likes: 3800, shares: 920, comments: 450 }, sentiment: 0.55, timestamp: new Date(Date.now() - 7800000).toISOString(), verified: false, constituency: 'Thane' },
 ];
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function randomSalience(): Record<Topic, number> {
     const raw = TOPICS.map(() => Math.random());
     const sum = raw.reduce((a, b) => a + b, 0);

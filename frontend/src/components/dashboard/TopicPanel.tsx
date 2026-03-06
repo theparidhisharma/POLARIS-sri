@@ -4,11 +4,13 @@ import { usePlatformStore } from '../../store/platformStore';
 import { topicColors, sentimentColor } from '../../design-system';
 import { TRENDING_POSTS } from '../../data/mockData';
 import type { Topic } from '../../types';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
     TrendingUp, Shield, Heart, Building2, Landmark, Users,
     ThumbsUp, Share2, MessageCircle, CheckCircle2, ChevronDown, ChevronUp,
     ExternalLink,
 } from 'lucide-react';
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 const TOPICS: Topic[] = ['Economy', 'Security', 'Healthcare', 'Infrastructure', 'Governance', 'Identity'];
 

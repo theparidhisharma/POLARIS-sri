@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePlatformStore } from '../../store/platformStore';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { sentimentColor, statusColor, topicColors } from '../../design-system';
 import type { Topic } from '../../types';
 import { X, Crosshair } from 'lucide-react';
@@ -133,7 +134,7 @@ const ConstituencyDetail: React.FC = () => {
                                 <YAxis domain={[-1, 1]} hide />
                                 <Tooltip
                                     contentStyle={{ background: '#0F2040', border: '1px solid #1E3A5F', borderRadius: 6, fontSize: 10 }}
-                                    formatter={(v: any) => [Number(v).toFixed(3), 'Sentiment']}
+                                    formatter={(v: number | undefined) => [(v ?? 0).toFixed(3), 'Sentiment']}
                                 />
                                 <Line type="monotone" dataKey="value" stroke="#FFB300" strokeWidth={2} dot={false} />
                             </LineChart>

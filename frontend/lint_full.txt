@@ -1,0 +1,244 @@
+﻿
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\dashboard\AlertsPanel.tsx
+  4:53  error  'ChevronUp' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\dashboard\AnalyticsPage.tsx
+    5:31   error    'TrendingPost' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   17:5    error    'RadarChart' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+   18:5    error    'Radar' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+   19:5    error    'PolarGrid' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+   20:5    error    'PolarAngleAxis' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   21:5    error    'PolarRadiusAxis' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   26:25   error    'ExternalLink' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   67:8    warning  React Hook useMemo has a missing dependency: 'keys'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react-hooks/exhaustive-deps
+   72:8    warning  React Hook useMemo has a missing dependency: 'keys'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react-hooks/exhaustive-deps
+   74:107  warning  React Hook useMemo has a missing dependency: 'keys'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react-hooks/exhaustive-deps
+   77:30   error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. This value was memoized in source but not in compilation output.
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\dashboard\AnalyticsPage.tsx:77:30
+  75 |
+  76 |     // Sentiment bar data
+> 77 |     const sentimentBarData = useMemo(() =>
+     |                              ^^^^^^^^^^^^^
+> 78 |         keys.map((k) => ({
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 79 |             name: constituencies[k].name,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 80 |             sentiment: parseFloat(constituencies[k].s.toFixed(3)),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 81 |             fill: sentimentColor(constituencies[k].s),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 82 |         })),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 83 |         [constituencies]
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 84 |     );
+     | ^^^^^^ Could not preserve existing memoization
+  85 |
+  86 |     // Topic distribution pie
+  87 |     const topicPieData = useMemo(() => {  react-hooks/preserve-manual-memoization
+   83:9    warning  React Hook useMemo has a missing dependency: 'keys'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react-hooks/exhaustive-deps
+  100:8    warning  React Hook useMemo has a missing dependency: 'keys'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react-hooks/exhaustive-deps
+  118:11   error    'platformCounts' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\dashboard\ConstituencyDetail.tsx
+  4:39  error  'topicColors' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\dashboard\Dashboard.tsx
+  89:8  warning  React Hook React.useEffect has a missing dependency: 'setStrategyModalOpen'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\dashboard\MapPanel.tsx
+  52:30  error  'name' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\dashboard\StrategyModal.tsx
+   21:17  error    'Shield' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+   21:25  error    'Heart' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+   21:32  error    'Building2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+   21:43  error    'Landmark' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+   21:53  error    'Users' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+  118:8   warning  React Hook useCallback has missing dependencies: 'SIM_PHASES.length' and 'setSimResult'. Either include them or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react-hooks/exhaustive-deps
+  405:80  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\dashboard\StrategyModal.tsx:405:80
+  403 |                                                 { label: '¤â(╬ös)', value: `┬▒${(result.ranked_strategies[0].delta_volatility * 2).toFixed(4)}`, color: '#FFB300', desc: 'Prediction uncertainty' },
+  404 |                                                 { label: 'P(s>0|╬Á)', value: `${(result.ranked_strategies[0].confidence * 100).toFixed(1)}%`, color: '#00897B', desc: 'Prob. positive outcome' },
+> 405 |                                                 { label: 'KL(PÔÇûQ)', value: `${(Math.random() * 0.1 + 0.02).toFixed(4)}`, color: '#AB47BC', desc: 'Distribution divergence' },
+      |                                                                                ^^^^^^^^^^^^^ Cannot call impure function
+  406 |                                                 { label: '¤ä┬¢', value: `${Math.floor(Math.random() * 30 + 60)}min`, color: '#FF7043', desc: 'Half-life of effect' },
+  407 |                                                 { label: 'Spatial ¤â', value: `${25}km`, color: '#1565C0', desc: 'Kernel smoothing radius' },
+  408 |                                                 { label: 'N(sims)', value: '10,000', color: '#546E7A', desc: 'Monte Carlo iterations' },  react-hooks/purity
+  406:85  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\dashboard\StrategyModal.tsx:406:85
+  404 |                                                 { label: 'P(s>0|╬Á)', value: `${(result.ranked_strategies[0].confidence * 100).toFixed(1)}%`, color: '#00897B', desc: 'Prob. positive outcome' },
+  405 |                                                 { label: 'KL(PÔÇûQ)', value: `${(Math.random() * 0.1 + 0.02).toFixed(4)}`, color: '#AB47BC', desc: 'Distribution divergence' },
+> 406 |                                                 { label: '¤ä┬¢', value: `${Math.floor(Math.random() * 30 + 60)}min`, color: '#FF7043', desc: 'Half-life of effect' },
+      |                                                                                     ^^^^^^^^^^^^^ Cannot call impure function
+  407 |                                                 { label: 'Spatial ¤â', value: `${25}km`, color: '#1565C0', desc: 'Kernel smoothing radius' },
+  408 |                                                 { label: 'N(sims)', value: '10,000', color: '#546E7A', desc: 'Monte Carlo iterations' },
+  409 |                                                 { label: 'Convergence', value: 'Ô£ô 0.001', color: '#4CAF50', desc: 'MCMC chain converged' },                                                   react-hooks/purity
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\dashboard\TopicPanel.tsx
+  10:5  error  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\onboarding\OnboardingWizard.tsx
+   14:5   error  'Loader2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+   16:5   error  'CheckCircle2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+   42:27  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\onboarding\OnboardingWizard.tsx:42:27
+  40 |         const arr = new Float32Array(500 * 3);
+  41 |         for (let i = 0; i < 500; i++) {
+> 42 |             const theta = Math.random() * Math.PI * 2;
+     |                           ^^^^^^^^^^^^^ Cannot call impure function
+  43 |             const phi = Math.acos(2 * Math.random() - 1);
+  44 |             const r = 3 + Math.random() * 1.5;
+  45 |             arr[i * 3] = r * Math.sin(phi) * Math.cos(theta);                                 react-hooks/purity
+   43:39  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\onboarding\OnboardingWizard.tsx:43:39
+  41 |         for (let i = 0; i < 500; i++) {
+  42 |             const theta = Math.random() * Math.PI * 2;
+> 43 |             const phi = Math.acos(2 * Math.random() - 1);
+     |                                       ^^^^^^^^^^^^^ Cannot call impure function
+  44 |             const r = 3 + Math.random() * 1.5;
+  45 |             arr[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+  46 |             arr[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);  react-hooks/purity
+   44:27  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\components\onboarding\OnboardingWizard.tsx:44:27
+  42 |             const theta = Math.random() * Math.PI * 2;
+  43 |             const phi = Math.acos(2 * Math.random() - 1);
+> 44 |             const r = 3 + Math.random() * 1.5;
+     |                           ^^^^^^^^^^^^^ Cannot call impure function
+  45 |             arr[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+  46 |             arr[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+  47 |             arr[i * 3 + 2] = r * Math.cos(phi);      react-hooks/purity
+  231:9   error  Expected an assignment or function call and instead saw an expression                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-expressions
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\data\mockData.ts
+  23:7   error  'PLATFORM_NAMES' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  53:10  error  'randomSalience' is defined but never used           @typescript-eslint/no-unused-vars
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\hooks\useWebSocket.ts
+  13:33  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `setWsStatus`, but the source dependencies were []. Inferred dependency not present in source.
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\hooks\useWebSocket.ts:13:33
+  11 |     const alertIntervalRef = useRef<number | null>(null);
+  12 |
+> 13 |     const connect = useCallback(() => {
+     |                                 ^^^^^^^
+> 14 |         setWsStatus('reconnecting');
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |
+     ÔÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |         }, 1500);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |     }, []);
+     | ^^^^^^ Could not preserve existing manual memoization
+  36 |
+  37 |     const disconnect = useCallback(() => {
+  38 |         if (intervalRef.current) clearInterval(intervalRef.current);                                                                                                              react-hooks/preserve-manual-memoization
+  13:33  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `constituencies`, but the source dependencies were []. Inferred dependency not present in source.
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\hooks\useWebSocket.ts:13:33
+  11 |     const alertIntervalRef = useRef<number | null>(null);
+  12 |
+> 13 |     const connect = useCallback(() => {
+     |                                 ^^^^^^^
+> 14 |         setWsStatus('reconnecting');
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |
+     ÔÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |         }, 1500);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |     }, []);
+     | ^^^^^^ Could not preserve existing manual memoization
+  36 |
+  37 |     const disconnect = useCallback(() => {
+  38 |         if (intervalRef.current) clearInterval(intervalRef.current);                                                                                                           react-hooks/preserve-manual-memoization
+  13:33  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `updateConstituency`, but the source dependencies were []. Inferred dependency not present in source.
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\hooks\useWebSocket.ts:13:33
+  11 |     const alertIntervalRef = useRef<number | null>(null);
+  12 |
+> 13 |     const connect = useCallback(() => {
+     |                                 ^^^^^^^
+> 14 |         setWsStatus('reconnecting');
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |
+     ÔÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |         }, 1500);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |     }, []);
+     | ^^^^^^ Could not preserve existing manual memoization
+  36 |
+  37 |     const disconnect = useCallback(() => {
+  38 |         if (intervalRef.current) clearInterval(intervalRef.current);                                                                                                       react-hooks/preserve-manual-memoization
+  13:33  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `addAlert`, but the source dependencies were []. Inferred dependency not present in source.
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\hooks\useWebSocket.ts:13:33
+  11 |     const alertIntervalRef = useRef<number | null>(null);
+  12 |
+> 13 |     const connect = useCallback(() => {
+     |                                 ^^^^^^^
+> 14 |         setWsStatus('reconnecting');
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |
+     ÔÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |         }, 1500);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |     }, []);
+     | ^^^^^^ Could not preserve existing manual memoization
+  36 |
+  37 |     const disconnect = useCallback(() => {
+  38 |         if (intervalRef.current) clearInterval(intervalRef.current);                                                                                                                 react-hooks/preserve-manual-memoization
+  35:8   warning  React Hook useCallback has missing dependencies: 'addAlert', 'constituencies', 'setWsStatus', and 'updateConstituency'. Either include them or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  react-hooks/exhaustive-deps
+  37:36  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `setWsStatus`, but the source dependencies were []. Inferred dependency not present in source.
+
+C:\Users\srisa\Desktop\india innovates\frontend\src\hooks\useWebSocket.ts:37:36
+  35 |     }, []);
+  36 |
+> 37 |     const disconnect = useCallback(() => {
+     |                                    ^^^^^^^
+> 38 |         if (intervalRef.current) clearInterval(intervalRef.current);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 39 |         if (alertIntervalRef.current) clearInterval(alertIntervalRef.current);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 40 |         setWsStatus('disconnected');
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 41 |     }, []);
+     | ^^^^^^ Could not preserve existing manual memoization
+  42 |
+  43 |     useEffect(() => {
+  44 |         connect();  react-hooks/preserve-manual-memoization
+  41:8   warning  React Hook useCallback has a missing dependency: 'setWsStatus'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            react-hooks/exhaustive-deps
+
+Ô£û 42 problems (33 errors, 9 warnings)
+
