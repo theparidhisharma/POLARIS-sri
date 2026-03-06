@@ -1,0 +1,11 @@
+﻿src/components/dashboard/ConstituencyDetail.tsx(136,37): error TS2322: Type '(v: number) => [string, "Sentiment"]' is not assignable to type 'Formatter<number, "Sentiment"> & ((value: number, name: "Sentiment", item: Payload<number, "Sentiment">, index: number, payload: Payload<number, "Sentiment">[]) => ReactNode | [...])'.
+  Type '(v: number) => [string, "Sentiment"]' is not assignable to type 'Formatter<number, "Sentiment">'.
+    Types of parameters 'v' and 'value' are incompatible.
+      Type 'number | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+src/components/dashboard/StrategyModal.tsx(371,53): error TS2322: Type '(v: number) => [string, "P(╬ös)"]' is not assignable to type 'Formatter<number, "P(╬ös)"> & ((value: number, name: "P(╬ös)", item: Payload<number, "P(╬ös)">, index: number, payload: Payload<number, "P(╬ös)">[]) => ReactNode | [...])'.
+  Type '(v: number) => [string, "P(╬ös)"]' is not assignable to type 'Formatter<number, "P(╬ös)">'.
+    Types of parameters 'v' and 'value' are incompatible.
+      Type 'number | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+src/components/onboarding/OnboardingWizard.tsx(62,18): error TS2741: Property 'args' is missing in type '{ attach: string; count: number; array: Float32Array<ArrayBuffer>; itemSize: number; }' but required in type 'Mutable<Overwrite<Partial<Overwrite<BufferAttribute, MathProps<BufferAttribute> & ReactProps<BufferAttribute>>>, Omit<...>>>'.

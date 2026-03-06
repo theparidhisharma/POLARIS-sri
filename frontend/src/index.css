@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
 /* ═══════════════════════════════════════════════════════════
    POLARIS-Political Opinion Learning and Adaptive Response Intelligence System
    Deep Indigo / Violet / Warm Gold palette
    ═══════════════════════════════════════════════════════════ */
-
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 /* ── Design Tokens ─────────────────────────────────────── */
 :root {
@@ -225,6 +225,7 @@ body {
   padding: 1px;
   background: linear-gradient(135deg, rgba(245, 200, 66, 0.25), rgba(139, 108, 246, 0.2), rgba(54, 214, 181, 0.1), rgba(245, 200, 66, 0.08));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: exclude;
   mask-composite: exclude;
   pointer-events: none;
