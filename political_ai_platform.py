@@ -20,7 +20,6 @@
 
 import numpy as np
 import json
-import os
 from datetime import datetime, timedelta
 from collections import defaultdict
 import warnings
@@ -126,7 +125,7 @@ def generate_posts(n_steps=T):
                              for _ in range(max(1, n_replies))]
 
                 posts.append({
-                    "text":text, "raw_text":text, "topic":topic,
+                    "text":s_bias, "raw_text":text, "topic":topic,
                     "constituency":cname, "platform":platform,
                     "step":step, "ts":ts,
                     "followers":followers, "age_days":age_days,
@@ -370,20 +369,12 @@ class AttentionGRU:
 
         return x_next, sigma2
 
-model = AttentionGRU(xd=21, hd=32, ud=16, heads=4, seq=8)
+model = AttentionGRU(xd=18, hd=32, ud=16, heads=4, seq=8)
 
 # Run forward pass over all constituencies
 print("    Running state transitions...")
 predicted_states = defaultdict(list)
 uncertainties    = defaultdict(list)
-
-
-# DEBUG: check dimensions
-print(f"    DEBUG: model.xd={model.xd}, model.Wz.shape={model.Wz.shape}")
-for __c in C_NAMES[:1]:
-    __h = states[__c]
-    print(f"    DEBUG: state vector dim for {__c}: {__h[0].shape}, len(history)={len(__h)}")
-    print(f"    DEBUG: first state vector: shape={__h[0].shape}")
 
 for cname in C_NAMES:
     hist = states[cname]
@@ -722,11 +713,10 @@ output = {
     }
 }
 
-output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output.json")
-with open(output_path, "w") as f:
+with open("/home/claude/algo/output.json", "w") as f:
     json.dump(output, f, indent=2)
 
-print(f"  JSON output saved → {output_path}")
+print("  JSON output saved → /home/claude/algo/output.json")
 print("=" * 70)
 print("  Pipeline complete. All 10 modules ran successfully.")
 print("=" * 70)

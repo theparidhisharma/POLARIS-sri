@@ -51,7 +51,7 @@ const DashboardHeader: React.FC = () => {
                 </div>
                 <div>
                     <div style={{ fontSize: 14, fontWeight: 700, color: '#EEEDF5', letterSpacing: '-0.01em' }}>
-                        {config?.partyName || 'Political AI'}
+                        {config?.partyName || 'POLARIS-Political Opinion Learning and Adaptive Response Intelligence System'}
                     </div>
                 </div>
             </div>
